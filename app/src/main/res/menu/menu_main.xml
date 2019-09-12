@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item android:id="@+id/pendingCallList"
+        android:title="@string/title_activity_home"
+        />
+    <item android:id="@+id/searchCall"
+        android:title="@string/searchCall"
+        android:orderInCategory="100" />
+
+    <item android:id="@+id/nearestATM"
+        android:orderInCategory="100"
+        android:title="@string/nearestATM"
+        />
+    <item android:id="@+id/rejectedCalls"
+        android:title="Rejected Calls"
+        />
+
+    <item android:id="@+id/logout"
+        android:orderInCategory="100"
+        android:title="@string/logout"
+        />
+</menu>

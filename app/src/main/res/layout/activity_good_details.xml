@@ -1,0 +1,2373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cms.callmanager.activities.GoodDetailsActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/rlItemField"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPink"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvNoField"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Number"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/inventory_dimention_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvNumSelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/ivNumArrow"
+                    android:background="@drawable/circular_background"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="5dp"
+                    android:text="Select"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/inventory_dimention" />
+
+                <ImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/ivNumArrow"
+
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Transfer From Code"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:id="@+id/trFromCode"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvFromCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:text=""
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+
+                                android:layout_gravity="center_vertical"
+                                android:id="@+id/ivEdit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Transfer From Name"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvFromName"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:text=""
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Transfer To Code"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:id="@+id/trToCode"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvToCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:text=""
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Transfer To Name"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvToName"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:text=""
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="In-Transit Code"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvInTrasit"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:text=""
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Posting Date"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvPostingDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:text=""
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+
+
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Business Unit"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvBusinessUnit"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:text=""
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Sub Business Unit"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvSubBusiness"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:text=""
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Hub Dim"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvHubDim"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:text=""
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Structure"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:id="@+id/trStructure"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvStructure"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:text=""
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Status"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:text=""
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+
+
+
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Transfer Type"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:id="@+id/trTransferType"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvTrasnferType"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:text=""
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+                    android:visibility="gone"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Reason Code "
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:text=""
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+
+
+                <TableRow
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Pick List"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvPiackListNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:text=""
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+
+                <TableRow
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Transfer Order ETA"
+
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:id="@+id/trETLDate"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvOrderETA"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/rlLines"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPink"
+                android:padding="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lines"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/inventory_dimention_title"
+                    android:textStyle="bold"
+                    android:paddingBottom="5dp"
+
+                    android:paddingTop="5dp"
+                    />
+
+
+                <LinearLayout
+                    android:id="@+id/llAddLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/ivLinesArrow"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/circular_background"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_add_red_24dp"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="Insert"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/inventory_dimention_title"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/ivLinesArrow"
+                    />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+
+            <RelativeLayout
+                android:id="@+id/rlOtherInfo"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPink"
+                android:padding="10dp"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other Information"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/inventory_dimention_title"
+                    android:textStyle="bold"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    />
+                <LinearLayout
+                    android:id="@+id/llVendorSelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/ivVendorArrow"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/circular_background"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Select"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/inventory_dimention" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/ivVendorArrow"
+                    />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Vendor Invoice No."
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:inputType="number"
+                                android:id="@+id/etVendorInvoiceNum"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                android:maxLength="20"
+                                android:hint="Enter Vendor No"
+                                android:background="@null"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Vendor Invoice Date"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:id="@+id/trInvoiceDate"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvVendorInvoiceDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Transported By"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:id="@+id/etTransportedBy"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:text=""
+                                android:maxLength="30"
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                android:background="@null"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Shipment Method Code"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:id="@+id/trShipmentMehodCode"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvShipMethodCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                android:background="@null"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text=" Shipping Agent"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:id="@+id/trShipAgentCode"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvShipingAgent"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="Vehicle No. "
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:id="@+id/etVehicleNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:maxLength="20"
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                android:background="@null"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="LR/RR No. "
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:id="@+id/etLLRRNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:maxLength="20"
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                android:background="@null"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp_5"
+                            android:text="LR/RR Date"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/inventory_dimention"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                    <TableRow
+                        android:id="@+id/trLLRRDate"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvLRDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp_5"
+                                android:text=""
+                                android:gravity="center_horizontal"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/inventory_dimention"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="3.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_drop_down_red_24dp"
+                                />
+                        </LinearLayout>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/black"
+                        />
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    />
+            </LinearLayout>
+
+            <!--old-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/llold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/llPostReopen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/dp_5"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btnPost"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="POST"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:background="@color/colorPink"
+                        />
+                    <Button
+                        android:id="@+id/btnReopen"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reopen"
+                        android:background="@color/colorPink"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llReleaseUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/dp_5"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btnRelease"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Release"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:background="@color/colorPink"
+                        />
+                    <Button
+                        android:id="@+id/btnUpdate"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UPDATE"
+                        android:background="@color/colorPink"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--new-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/llNew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/dp_5"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btnSave"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Save"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:background="@color/colorPink"
+                        />
+                    <Button
+                        android:id="@+id/btnCancel"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cancel"
+                        android:background="@color/colorPink"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

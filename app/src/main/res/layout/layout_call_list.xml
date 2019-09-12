@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="16dp"
+        android:weightSum="1">
+        <TextView
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_weight="0.40"
+            android:fontFamily=""
+            android:id="@+id/viewAtmID"
+            android:textStyle="bold"
+            android:textColor="@color/colorPurple"
+            android:text="ATM ID "
+            android:layout_height="wrap_content"/>
+        <!--<TextView
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_marginTop="2dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPurple"
+            android:text=":"
+            android:layout_height="wrap_content"/>-->
+        <TextView
+            android:id ="@+id/atmID"
+            android:layout_width="0dp"
+            android:layout_weight="0.60"
+            android:textSize="14sp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPurple"
+            android:text="SPCC111"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+        <!--<android.support.v7.widget.AppCompatButton
+            android:layout_weight="0.9"
+            android:layout_height="25dp"
+            android:layout_width="0dp"
+            android:id="@+id/checkStatus"
+            android:background="@drawable/round"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+
+            />-->
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:weightSum="1"
+       >
+        <TextView
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_weight="0.40"
+            android:fontFamily=""
+            android:id="@+id/viewDocketNo"
+            android:textColor="@color/colorDarkGrey"
+            android:text="Docket No "
+            android:layout_height="wrap_content"/>
+        <!--<TextView
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_marginTop="2dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPurple"
+            android:text=":"
+            android:layout_height="wrap_content"/>-->
+        <TextView
+            android:id ="@+id/docketNo"
+            android:layout_width="0dp"
+            android:layout_weight="0.60"
+            android:textSize="14sp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorDarkGrey"
+            android:text="SPCC111"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:weightSum="1"
+       >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.40"
+            android:textSize="14sp"
+            android:id="@+id/viewCallDate"
+            android:textColor="@color/colorDarkGrey"
+            android:text="Call Date"
+            android:layout_height="wrap_content"/>
+        <!--<TextView
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:textStyle="bold"
+            android:textColor="@color/colorDarkGrey"
+            android:text=":"
+            android:layout_height="wrap_content"/>-->
+        <TextView
+            android:id ="@+id/callDate"
+            android:layout_width="0dp"
+            android:textSize="14sp"
+            android:layout_weight="0.60"
+            android:textColor="@color/colorDarkGrey"
+            android:text=""
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:weightSum="1"
+  >
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="0.40"
+        android:textSize="14sp"
+        android:id="@+id/viewBankName"
+        android:textColor="@color/colorDarkGrey"
+        android:text="Bank Name"
+        android:layout_height="wrap_content"/>
+    <!--<TextView
+        android:textSize="14sp"
+        android:layout_width="0dp"
+        android:layout_weight="0.2"
+        android:textStyle="bold"
+        android:textColor="@color/colorDarkGrey"
+        android:text=":"
+        android:layout_height="wrap_content"/>-->
+    <TextView
+        android:id ="@+id/bankName"
+        android:layout_width="0dp"
+        android:layout_weight="0.60"
+        android:textSize="14sp"
+        android:textColor="@color/colorDarkGrey"
+        android:text="SBI"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:weightSum="1"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.40"
+            android:textSize="14sp"
+            android:id="@+id/viewResponseTime"
+            android:textColor="@color/colorDarkGrey"
+            android:text="Response Time "
+            android:layout_height="wrap_content"/>
+       <!-- <TextView
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:textStyle="bold"
+            android:textColor="@color/colorPurple"
+            android:text=":"
+            android:layout_height="wrap_content"/>-->
+        <TextView
+            android:id ="@+id/responseTime"
+            android:layout_width="0dp"
+            android:layout_weight="0.60"
+            android:textSize="14sp"
+
+            android:textColor="@color/colorDarkGrey"
+            android:text=""
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:paddingLeft="@dimen/activity_horizontal_margin"
+       android:weightSum="1"
+       >
+       <TextView
+           android:layout_width="0dp"
+           android:layout_weight="0.40"
+           android:textSize="14sp"
+           android:id="@+id/viewRequestTime"
+           android:textColor="@color/colorDarkGrey"
+           android:text="Resolution Time"
+           android:layout_height="wrap_content"/>
+       <!--<TextView
+           android:textSize="14sp"
+           android:layout_width="0dp"
+           android:layout_weight="0.2"
+           android:textStyle="bold"
+           android:textColor="@color/colorDarkGrey"
+           android:text=":"
+           android:layout_height="wrap_content"/>-->
+       <TextView
+           android:id ="@+id/resolutionTime"
+           android:layout_width="0dp"
+           android:textSize="14sp"
+           android:layout_weight="0.60"
+           android:textColor="@color/colorDarkGrey"
+           android:text=""
+           android:layout_height="wrap_content"/>
+   </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:weightSum="1"
+       >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.40"
+            android:textSize="14sp"
+            android:id="@+id/viewMainStatusss"
+            android:textColor="@color/colorDarkGrey"
+            android:text="Status "
+            android:layout_height="wrap_content"/>
+        <!-- <TextView
+             android:textSize="14sp"
+             android:layout_width="0dp"
+             android:layout_weight="0.2"
+             android:textStyle="bold"
+             android:textColor="@color/colorDarkGrey"
+             android:text=":"
+             android:layout_height="wrap_content"/>-->
+        <TextView
+            android:id ="@+id/viewMainStatus"
+            android:layout_weight="0.60"
+            android:layout_width="0dp"
+            android:textSize="14sp"
+
+            android:textColor="@color/colorDarkGrey"
+            android:text=""
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:weightSum="1"
+       >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.40"
+            android:textSize="14sp"
+            android:id="@+id/viewStatus"
+            android:textColor="@color/colorDarkGrey"
+            android:text="Sub Status "
+            android:layout_height="wrap_content"/>
+       <!-- <TextView
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:textStyle="bold"
+            android:textColor="@color/colorDarkGrey"
+            android:text=":"
+            android:layout_height="wrap_content"/>-->
+        <TextView
+            android:id ="@+id/status"
+            android:layout_weight="0.60"
+            android:layout_width="0dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorDarkGrey"
+            android:text="assigned"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:weightSum="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.40"
+            android:textSize="14sp"
+            android:id="@+id/viewDiagnosis"
+            android:textColor="@color/colorDarkGrey"
+            android:text="Diagnosis "
+            android:layout_height="wrap_content"/>
+        <!-- <TextView
+             android:textSize="14sp"
+             android:layout_width="0dp"
+             android:layout_weight="0.2"
+             android:textStyle="bold"
+             android:textColor="@color/colorDarkGrey"
+             android:text=":"
+             android:layout_height="wrap_content"/>-->
+        <TextView
+            android:id ="@+id/Diagnosis"
+            android:layout_weight="0.60"
+            android:layout_width="0dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorDarkGrey"
+            android:text=""
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:weightSum="1"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.40"
+            android:textSize="14sp"
+            android:id="@+id/viewcall_type"
+            android:textColor="@color/colorDarkGrey"
+            android:text="Call Type "
+            android:layout_height="wrap_content"/>
+        <!-- <TextView
+             android:textSize="14sp"
+             android:layout_width="0dp"
+             android:layout_weight="0.2"
+             android:textStyle="bold"
+             android:textColor="@color/colorDarkGrey"
+             android:text=":"
+             android:layout_height="wrap_content"/>-->
+        <TextView
+            android:id ="@+id/Call_type"
+            android:layout_weight="0.60"
+            android:layout_width="0dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorDarkGrey"
+            android:text=""
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000000"/>
+
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">CMS</string>
+    <string name="searchCall">Search Calls</string>
+    <string name="nearestATM">Nearest ATMs</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="pick_image_intent_chooser_title">Select source</string>
+    <string name="logout">Logout</string>
+    <string name="network_error">Not connected to the internet. Please check your internet connection and try again.!</string>
+    <string name="external_dir">GetSignature</string>
+    <string name="inValidLogin">Invalid Username or Password.</string>
+    <string-array name="category">
+        <item>Select Category</item>
+        <item>CANCELLED</item>
+        <item>COURTESY CALL</item>
+        <item>DUPLICATE CALL</item>
+        <item>FLM CALL</item>
+        <item>FLM VISIT - CHGC</item>
+        <item>HW/SW ISSUE</item>
+        <item>NETWORK ISSUE</item>
+        <item>OTHERS</item>
+        <item>PREVENTIVE MAINTENANCE</item>
+        <item>QUOTE CANCELLED</item>
+        <item>REMOTE SUPPORT SITE ISSUE</item>
+    </string-array>
+    <string-array name="subStatus">
+        <item>Dispatched Engineer</item>
+        <item>Engineer Reached</item>
+        <item>Engineer Started</item>
+        <item>Repair Started</item>
+    </string-array>
+    <string-array name="spareUsed">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string name="signature">Signature</string>
+    <string name="clear_pad">Clear Pad</string>
+    <string name="save_signature">Save Signature</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="InvalidName">Enter User ID</string>
+    <string name="InvalidPassword">Enter Password</string>
+    <string name="noAtmFound">Currently No ATM Found.</string>
+    <string name="title_activity_home">Call List</string>
+    <string name="title_activity_attachment_view">Attached Image</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="cancel">GPS is not enabled</string>
+    <string name="GPSAlertDialogTitle">Enable GPS</string>
+    <string name="GPSAlertDialogMessage">Enable GPS</string>
+
+    <string name="err_msg_password">Enter the password</string>
+    <string name="err_msg_password8dig">Enter minimum 8 digit password</string>
+    <string name="title_inventory_transfer">Inventory</string>
+    <string name="inventory_to_be_received_stock_transfer">Inventory to be received stock transfer</string>
+    <string name="consumption_for_replacement_items">Consumption for replacement items</string>
+    <string name="to_for_enginner_to_hub_location_defective">TO for enginner to HUB location (Defective)</string>
+    <string name="to_for_enginner_to_hub_location_good">TO for enginner to HUB location (Good)</string>
+    <string name="title_activity_inv_tras">CMS</string>
+    <string name="title_activity_stock_trans">Stock transfer</string>
+    <string name="title_activity_stock_trans_details">Stock Transfer Detail</string>
+    <string name="menu_search">search</string>
+    <string name="title_activity_good_hub">HUB location (Good)</string>
+    <string name="title_activity_defective_hub">HUB location (Defective)</string>
+    <string name="title_activity_replacement_item">Consumption for replacement items</string>
+
+
+</resources>

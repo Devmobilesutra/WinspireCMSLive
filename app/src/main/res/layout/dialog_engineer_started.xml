@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="#FFFFFF"
+       android:layout_marginTop="2dp"
+       android:orientation="vertical"
+       >
+
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textColor="@color/colorDarkGrey"
+           android:id="@+id/scheduleTime"
+           android:theme="@style/BorderColor"
+           android:focusable="true"
+           android:textSize="16sp"
+           android:focusableInTouchMode="true"
+           android:clickable="true"
+           android:layout_marginRight="10dp"
+           android:layout_marginLeft="10dp"
+           android:layout_marginTop="10dp"
+           android:inputType="none"
+           android:hint="Schedule Time To Reach"/>
+
+       <android.support.v7.widget.AppCompatButton
+           android:id="@+id/saveBtn"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="@color/colorDarkGrey"
+           android:textSize="16dp"
+           android:layout_alignParentBottom="true"
+           android:layout_gravity="end"
+           android:layout_marginRight="10dp"
+           android:layout_marginLeft="10dp"
+           android:layout_marginTop="5dp"
+           style="@style/Widget.AppCompat.Button.Borderless"
+           android:layout_marginBottom="10dp"
+           android:text="Save"/>
+
+   </LinearLayout>
+
+
+
+</LinearLayout>

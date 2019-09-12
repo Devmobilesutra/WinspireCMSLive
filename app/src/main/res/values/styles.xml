@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!--   <item name="logo">@drawable/ic_launcher</item>-->
+        <item name="displayOptions">useLogo|showHome</item>
+        <item name="colorPrimaryDark">@color/primary_dark1</item>
+        <item name="colorPrimary">@color/colorPink</item>
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <!--<item name="colorControlNormal">#FFFFFF</item>-->
+        <item name="colorControlActivated">@color/colorPink</item>
+    </style>
+
+    <style name="BorderColor" parent="Theme.AppCompat.Light">
+        <!--<item name="colorControlNormal">#FFFFFF</item>-->
+        <item name="colorControlActivated">@color/colorDarkGrey</item>
+    </style>
+
+    <style name="MyActionBar" parent="Theme.AppCompat.Light">
+        <item name="android:background">@color/colorPink</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>

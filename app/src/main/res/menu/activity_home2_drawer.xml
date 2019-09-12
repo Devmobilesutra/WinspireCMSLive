@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/inventoryTransfer"
+            android:title="@string/title_inventory_transfer"
+            />
+        <item android:id="@+id/pendingCallList"
+            android:title="@string/title_activity_home"
+            />
+         <item android:id="@+id/searchCall"
+            android:title="@string/searchCall"
+         />
+
+        <item android:id="@+id/nearestATM"
+             android:title="@string/nearestATM"
+            />
+
+        <item android:id="@+id/rejectedCalls"
+            android:title="Rejected Calls"
+            />
+
+        <item android:id="@+id/logout"
+              android:title="@string/logout"
+            />
+    </group>
+
+
+
+</menu>

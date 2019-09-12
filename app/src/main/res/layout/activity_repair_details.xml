@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="8dp"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    >
+
+    <include
+        android:id="@+id/progressBar"
+        layout="@layout/view_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:indeterminateDrawable="@drawable/loading" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/spinnerProblemLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Problem Fix" />
+
+                <Spinner
+                    android:id="@+id/spinnerProblem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:theme="@style/BorderColor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/spinnerSolutionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Solution" />
+
+                <Spinner
+                    android:id="@+id/spinnerSolution"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:theme="@style/BorderColor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/spinnerCategoryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Response Category" />
+
+                <Spinner
+                    android:id="@+id/spinnerCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:theme="@style/BorderColor" />
+            </LinearLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:theme="@style/BorderColor">
+
+                <EditText
+                    android:id="@+id/edtTxtTicketNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ticket Number"
+                    android:textColor="@color/colorDarkGrey"
+                    android:theme="@style/BorderColor" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- <android.support.design.widget.TextInputLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="4dp"
+                 android:layout_marginBottom="4dp"
+                 android:theme="@style/BorderColor"
+                 android:id="@+id/commentLayout"
+                 android:layout_above="@+id/spinnerSparesUsedLayout">
+                 <EditText
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:textColor="@color/colorDarkGrey"
+                     android:id="@+id/edtTxtComment"
+                     android:inputType="textMultiLine"
+                     android:hint="Comments"
+                     android:theme="@style/BorderColor"
+                     />
+             </android.support.design.widget.TextInputLayout>-->
+            <!--  <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:id="@+id/spinnerSparesUsedLayout"
+                  android:layout_above="@+id/checkboxEngineerOnSite">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Spares Used"/>
+              <Spinner
+                  android:id="@+id/spinnerSparesUsed"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:entries="@array/spareUsed"
+                  android:layout_marginTop="4dp"
+                  android:theme="@style/BorderColor"
+                  android:layout_marginBottom="4dp"
+                  />
+              </LinearLayout>-->
+            <CheckBox
+                android:id="@+id/checkboxEngineerOnSite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:checked="true"
+                android:text="Engineer On Site"
+                android:theme="@style/MyCheckBox" />
+
+            <CheckBox
+                android:id="@+id/checkboxSparesUsed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:checked="false"
+                android:text="Spares Used"
+                android:theme="@style/MyCheckBox" />
+            <!--   <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_above="@+id/checkboxUnproductive"
+                   android:id="@+id/spinnerSubStatusLayout">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Sub Status"/>
+               <Spinner
+                   android:id="@+id/spinnerSubStatus"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="4dp"
+                   android:layout_marginBottom="4dp"
+                   android:theme="@style/BorderColor"
+
+                   android:entries="@array/category" />
+               </LinearLayout>-->
+
+            <CheckBox
+                android:id="@+id/checkboxUnproductive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="12dp"
+                android:checked="false"
+                android:text="Unproductive Visit"
+                android:theme="@style/MyCheckBox" />
+            <!--      <android.support.design.widget.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="4dp"
+                      android:layout_marginBottom="4dp"
+                      android:theme="@style/BorderColor"
+
+                      android:id="@+id/subStatusLayout"
+                      >
+                      <EditText
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:theme="@style/BorderColor"
+                          android:textColor="@color/colorDarkGrey"
+                          android:id="@+id/subStatus"
+                          android:enabled="false"
+                          android:text="Repair Completed"
+                          android:hint="Sub Status"
+                          />
+                  </android.support.design.widget.TextInputLayout>-->
+            <LinearLayout
+                android:id="@+id/spinnerStatusLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sub Status" />
+
+                <Spinner
+                    android:id="@+id/statusSpinnerCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:theme="@style/BorderColor" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkboxReturnVisit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                android:checked="false"
+                android:text="Return Visit"
+                android:theme="@style/MyCheckBox" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:theme="@style/BorderColor">
+
+                <EditText
+                    android:id="@+id/edtTxtDistance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Distance Travelled in KM"
+                    android:inputType="number"
+                    android:textColor="@color/colorDarkGrey"
+                    android:theme="@style/BorderColor" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/commentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/spinnerSparesUsedLayout"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:theme="@style/BorderColor">
+
+                <EditText
+                    android:id="@+id/edtTxtComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Comments"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/colorDarkGrey"
+                    android:theme="@style/BorderColor" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/save_repair_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/colorPink"
+                android:text="Save"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

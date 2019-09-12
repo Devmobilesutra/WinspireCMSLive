@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/txtCustodianDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/BorderColor"
+        android:padding="16dp"
+        >
+        <EditText
+            android:id="@+id/edtCustodianDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Custodian Date"
+            android:clickable="true"
+            android:inputType="date"
+            android:focusable="false"
+            android:editable="false"
+            android:textColor="@color/colorDarkGrey"
+            android:theme="@style/BorderColor" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/txtTimeLayout"
+        android:theme="@style/BorderColor"
+        android:padding="16dp"
+        >
+        <EditText
+            android:id="@+id/timePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Time"
+            android:clickable="true"
+            android:inputType="time"
+            android:focusable="false"
+            android:editable="false"
+            android:textColor="@color/colorDarkGrey"
+            android:theme="@style/BorderColor" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRemarkLayout"
+        android:theme="@style/BorderColor"
+        android:padding="16dp"
+        >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorDarkGrey"
+        android:id="@+id/remarks"
+        android:theme="@style/BorderColor"
+        android:hint="comments" />
+    </android.support.design.widget.TextInputLayout>
+
+</LinearLayout>
