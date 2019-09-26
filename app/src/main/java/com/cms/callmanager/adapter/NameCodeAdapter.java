@@ -25,7 +25,7 @@ public class NameCodeAdapter extends ArrayAdapter<CodeAndNameModel> implements F
     private ArrayList<CodeAndNameModel> dataSet;
     Context mContext;
     private Filter planetFilter;
-    private List<CodeAndNameModel> planetList;
+    public static List<CodeAndNameModel> planetList;
     // View lookup cache
     private static class ViewHolder {
         TextView txtName;
@@ -71,6 +71,7 @@ public class NameCodeAdapter extends ArrayAdapter<CodeAndNameModel> implements F
     public Filter getFilter() {
         if (planetFilter == null)
             planetFilter = new PlanetFilter();
+
 
         return planetFilter;
     }
@@ -137,11 +138,13 @@ public class NameCodeAdapter extends ArrayAdapter<CodeAndNameModel> implements F
                 // We perform filtering operation
                 List<CodeAndNameModel> nPlanetList = new ArrayList<CodeAndNameModel>();
 
-                for (CodeAndNameModel p : planetList) {
+                for (CodeAndNameModel p : dataSet) {
 
-                    if (p.getName().toUpperCase().startsWith(constraint.toString().toUpperCase()) ||
-                            p.getCode().toUpperCase().startsWith(constraint.toString().toUpperCase())
-                           )
+                  //  if ((p.getName()+ p.getCode()).toUpperCase().startsWith(constraint.toString().toUpperCase()))
+
+
+                    if (p.getName().toUpperCase().contains(constraint.toString().toUpperCase()) ||
+                            p.getCode().toUpperCase().contains(constraint.toString().toUpperCase()))
                     {
                         nPlanetList.add(p);
                     }
@@ -169,8 +172,8 @@ public class NameCodeAdapter extends ArrayAdapter<CodeAndNameModel> implements F
             }*/
 
             planetList = (List<CodeAndNameModel>) results.values;
-            dataSet.clear();
-            dataSet.addAll(planetList);
+         //   dataSet.clear();
+         //   dataSet.addAll(planetList);
             Log.d("", "onTextChanged: "+results.values);
             notifyDataSetChanged();
 

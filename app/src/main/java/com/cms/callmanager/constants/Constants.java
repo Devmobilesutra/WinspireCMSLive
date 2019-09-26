@@ -11,7 +11,9 @@ public class Constants {
 
 
    // public static String Base_url= "http://115.248.31.151:90/cms/";
-    public static String Base_url= "http://52.172.203.199/webapi/";
+  //  public static String Base_url= "http://52.172.203.199/webapi/";  //old
+
+    public static String Base_url= "https://naverp.cms.com:8085/webapi/";  //new
     public static boolean LOG_DEBUG = true;
 
     public static String key = "OiB2LU+KWGnkI1j5nlkkcA==";

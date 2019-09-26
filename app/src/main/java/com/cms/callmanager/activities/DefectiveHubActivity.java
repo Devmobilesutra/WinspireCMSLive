@@ -389,7 +389,7 @@ public class DefectiveHubActivity extends AppCompatActivity
 
         switch (id){
             case R.id.inventoryTransfer :
-                startActivity(new Intent(DefectiveHubActivity.this, DefectiveHubActivity.class));
+                startActivity(new Intent(DefectiveHubActivity.this, InvTrasActivity.class));
                 finish();
                 break;
             case R.id.searchCall :

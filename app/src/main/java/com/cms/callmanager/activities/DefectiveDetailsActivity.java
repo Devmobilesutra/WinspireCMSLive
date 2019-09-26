@@ -2425,7 +2425,10 @@ public class DefectiveDetailsActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                CodeAndNameModel dataModel= list.get(position);
+             //   CodeAndNameModel dataModel= list.get(position);
+
+                CodeAndNameModel dataModel= NameCodeAdapter.planetList.get(position);
+
                 dialog.dismiss();
 
                 if (APIFLAG.equalsIgnoreCase("FromCode"))

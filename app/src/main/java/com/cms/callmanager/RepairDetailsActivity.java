@@ -86,6 +86,7 @@ public class RepairDetailsActivity extends AppCompatActivity {
         checkboxReturnVisit = (CheckBox) findViewById(R.id.checkboxReturnVisit);
         spinnerStatusLayout = (LinearLayout) findViewById(R.id.spinnerStatusLayout);
 
+
         searchField.add("Select");
         ArrayAdapter<String> searchFieldAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, searchField);
         statusSpinnerCategory.setAdapter(searchFieldAdapter);
@@ -229,7 +230,7 @@ public class RepairDetailsActivity extends AppCompatActivity {
                     if (payLoadId.equalsIgnoreCase("-1") || sPayLoadId.equalsIgnoreCase("-1") || rCPayLoadId.equalsIgnoreCase("-1")) {
                         Utils.showAlertBox("Please Enter All Values", RepairDetailsActivity.this);
                     } else {
-                        new RepairDetailsAsyncTask(Constants.FOLLOWUP, "PUT"
+                        new RepairDetailsAsyncTask(Constants.FOLLOWUP, "POST"
                                 , RepairDetailsActivity.this, postParamData).execute();
                     }
                 }
@@ -269,9 +270,9 @@ public class RepairDetailsActivity extends AppCompatActivity {
             if (firstItem.equals(String.valueOf(spinnerCategory.getSelectedItem()))) {
                 // ToDo when first item is selected
             } else {
-                Toast.makeText(parent.getContext(),
+               /* Toast.makeText(parent.getContext(),
                         "You have selected : " + parent.getItemAtPosition(pos).toString(),
-                        Toast.LENGTH_SHORT).show();
+                        Toast.LENGTH_SHORT).show();*/
             }
         }
 

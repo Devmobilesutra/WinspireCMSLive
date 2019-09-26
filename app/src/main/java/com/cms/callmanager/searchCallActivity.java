@@ -355,7 +355,7 @@ public class searchCallActivity extends AppCompatActivity implements View.OnClic
             public void onDateSet(DatePicker view, int y, int monthOfYear, int dayOfMonth) {
                 try {
                     year = view.getYear();
-                    month = view.getMonth() + 1;
+                    month = view.getMonth();
                     day = view.getDayOfMonth();
                     showDate(year, month, day, editText);
                 } catch (Exception e) {

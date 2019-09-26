@@ -2430,10 +2430,13 @@ public class GoodDetailsActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (count < before) {
                     // We're deleting char so we need to reset the adapter data
+
                     nameCodeAdapter.resetData();
                 }
 
                 nameCodeAdapter.getFilter().filter(s.toString());
+                nameCodeAdapter.notifyDataSetChanged();
+
 
             }
 
@@ -2447,7 +2450,7 @@ public class GoodDetailsActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                CodeAndNameModel dataModel= list.get(position);
+                CodeAndNameModel dataModel= NameCodeAdapter.planetList.get(position);
 
                  //  CodeAndNameModel
 

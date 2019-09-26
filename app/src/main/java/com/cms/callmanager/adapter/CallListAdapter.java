@@ -377,7 +377,7 @@ public class CallListAdapter extends RecyclerView.Adapter<CallListAdapter.ViewHo
                 if (finalAlertBoxOptions[item].equals("Call Accepted") ||
                         finalAlertBoxOptions[item].equals("Engineer Reached") ||
                         finalAlertBoxOptions[item].equals("Engineer Started")) {
-                    StatusAsyncTask statusAsyncTask = new StatusAsyncTask(Constants.FOLLOWUP, "PUT",
+                    StatusAsyncTask statusAsyncTask = new StatusAsyncTask(Constants.FOLLOWUP, "POST",
                             context, (String) finalAlertBoxOptions[item], pos);
                     statusAsyncTask.execute();
 
@@ -510,12 +510,12 @@ public class CallListAdapter extends RecyclerView.Adapter<CallListAdapter.ViewHo
                                                           String my = "";
                                                           String dm = "";
 
-                                                          if (monthOfYear > 0 && monthOfYear < 9) {
+                                                          if (monthOfYear >= 0 && monthOfYear <= 9) {
                                                               my = "0" + (monthOfYear + 1);
                                                           } else {
                                                               my = String.valueOf(monthOfYear);
                                                           }
-                                                          if (dayOfMonth > 0 && dayOfMonth < 9) {
+                                                          if (dayOfMonth >= 0 && dayOfMonth <= 9) {
                                                               dm = "0" + dayOfMonth;
                                                           } else {
                                                               dm = String.valueOf(dayOfMonth);
@@ -652,12 +652,12 @@ public class CallListAdapter extends RecyclerView.Adapter<CallListAdapter.ViewHo
                                                       // if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                                                          //  Log.e("TAG", "inside OnTimeSetListener hr "+timePicker.getHour()+ " min "+timePicker.getMinute());
                                                   //     Log.e(TAG, "onTimeSet: hr "+selectedHr +" min "+selectedMin );
-                                                           if (selectedHour > 0 && selectedHour < 9) {
+                                                           if (selectedHour >= 0 && selectedHour <=9) {
                                                                selectedHr = "0" + selectedHour;
                                                            } else {
                                                                selectedHr = ""+selectedHour;
                                                            }
-                                                           if (selectedMinute > 0 && selectedMinute < 9) {
+                                                           if (selectedMinute >= 0 && selectedMinute <= 9) {
                                                                selectedMin = "0" + selectedMinute;
                                                            } else {
                                                                selectedMin = String.valueOf(selectedMinute);
@@ -753,7 +753,7 @@ public class CallListAdapter extends RecyclerView.Adapter<CallListAdapter.ViewHo
                         Utils.Log("rm===" + rm);
                         Date d = df.parse(nowAsISO);
                         if (Validation.timeValidation(d)) {
-                            StatusRepairAsyncTask statusRepairAsyncTask = new StatusRepairAsyncTask(Constants.FOLLOWUP, "PUT",
+                            StatusRepairAsyncTask statusRepairAsyncTask = new StatusRepairAsyncTask(Constants.FOLLOWUP, "POST",
                                     context, "Repair Started", pos, nowAsISO, remarks.getText().toString());
                             statusRepairAsyncTask.execute();
                             dialog.dismiss();
