@@ -1,0 +1,1266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="8dp"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    >
+
+    <!--<include
+        android:id="@+id/progressBar"
+        layout="@layout/view_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:indeterminateDrawable="@drawable/loading" />-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnPageOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="#FFFFFF"
+                android:background="@color/colorPink"
+                android:text="Repair Details – Page 1"
+                android:textAllCaps="false"
+                android:layout_marginBottom="10dp"/>
+
+
+            <LinearLayout
+                android:id="@+id/RepairDetailsPage1_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:id="@+id/spinnerProblemLayout"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Problem Fix"
+                            android:padding="5dp"/>
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_border">
+
+                            <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                                android:id="@+id/ProblemFixSpinner"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:theme="@style/BorderColor"
+                                app:hintText="--Select--"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/spinnerSolutionLayout"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Solution"
+                            android:padding="5dp"/>
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_border">
+                            <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                                android:id="@+id/SpinnerSolution"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:theme="@style/BorderColor"
+                                app:hintText="--Select--"
+                                />
+                        </LinearLayout>
+
+                        <!--  <com.guna.libmultispinner.MultiSelectionSpinner
+                              android:id="@+id/SpinnerSolution"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="4dp"
+                              android:layout_marginBottom="4dp"
+                              android:theme="@style/BorderColor"/>-->
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/spinnerCategoryLayout"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Response Category"
+                            android:padding="5dp"/>
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_border">
+                            <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                                android:id="@+id/SpinnerRespCategory"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:theme="@style/BorderColor"
+                                app:hintText="--Select--"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/spinnerActvitytypelay"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Activity Type"
+                            android:padding="5dp"/>
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_border">
+
+                            <Spinner
+                                android:id="@+id/spinnerActivityType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:theme="@style/BorderColor"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:id="@+id/spinnerTATMissReasonlayout"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TAT Miss Reason"
+                            android:padding="5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_border">
+                            <Spinner
+                                android:id="@+id/spinnerTATMissReason"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:theme="@style/BorderColor"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/spinnerQuestionnaireLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btnQuestionnaire"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:layout_centerInParent="true"
+                        android:textColor="#FFFFFF"
+                        android:background="@color/colorPink"
+                        android:text="Questionnaire"
+                        android:textAllCaps="false"/>
+
+
+                    <!--  <LinearLayout
+                          android:id="@+id/QuestionnaireLayout"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          >
+
+                          <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:weightSum="2">
+
+                          <LinearLayout
+                              android:id="@+id/spinnerQues_IdLayout"
+                              android:layout_weight="1"
+                              android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:layout_margin="5dp"
+                              android:orientation="vertical">
+
+                              <TextView
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:text="Ques Id"
+                                  android:padding="5dp"/>
+                              <LinearLayout
+                                  android:layout_width="fill_parent"
+                                  android:layout_height="wrap_content"
+                                  android:background="@drawable/spinner_border">
+                                  <com.guna.libmultispinner.MultiSelectionSpinner
+                                      android:id="@+id/SpinnerQues_Id"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="match_parent"
+                                      android:layout_marginTop="4dp"
+                                      android:layout_marginBottom="4dp"
+                                      android:theme="@style/BorderColor"/>
+                              </LinearLayout>
+
+                          </LinearLayout>
+                          <LinearLayout
+                              android:id="@+id/spinnerQuestionlay"
+                              android:layout_weight="1"
+                              android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:layout_margin="5dp"
+                              android:orientation="vertical">
+
+                              <TextView
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:text="Question"
+                                  android:padding="5dp"/>
+                              <LinearLayout
+                                  android:layout_width="fill_parent"
+                                  android:layout_height="wrap_content"
+                                  android:background="@drawable/spinner_border">
+
+                                  <Spinner
+                                      android:id="@+id/spinnerQuestion"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:layout_marginTop="4dp"
+                                      android:layout_marginBottom="4dp"
+                                      android:theme="@style/BorderColor" />
+                              </LinearLayout>
+                          </LinearLayout>
+
+                      </LinearLayout>
+
+
+
+
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:weightSum="2">
+                      <LinearLayout
+                          android:id="@+id/spinnerAnswerIdLayout"
+                          android:layout_weight="1"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_margin="5dp"
+                          android:orientation="vertical">
+
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:text="Answer Id"
+                              android:padding="5dp"/>
+                          <LinearLayout
+                              android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:background="@drawable/spinner_border">
+                              <com.guna.libmultispinner.MultiSelectionSpinner
+                                  android:id="@+id/SpinnerAnswerId"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="4dp"
+                                  android:layout_marginBottom="4dp"
+                                  android:theme="@style/BorderColor"/>
+                          </LinearLayout>
+                      </LinearLayout>
+                      <LinearLayout
+                          android:id="@+id/spinnerAnswerLayout"
+                          android:layout_weight="1"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_margin="5dp"
+                          android:orientation="vertical">
+
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:text="Answer"
+                              android:padding="5dp"/>
+                          <LinearLayout
+                              android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:background="@drawable/spinner_border">
+                              <com.guna.libmultispinner.MultiSelectionSpinner
+                                  android:id="@+id/SpinnerAnswer"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="4dp"
+                                  android:layout_marginBottom="4dp"
+                                  android:theme="@style/BorderColor"/>
+                          </LinearLayout>
+
+
+                      </LinearLayout>
+                  </LinearLayout>
+                    <LinearLayout
+                          android:id="@+id/spinnerCommentLayout"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="5dp"
+                          android:orientation="vertical"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true">
+
+                          <android.support.design.widget.TextInputLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginBottom="4dp"
+                              android:theme="@style/BorderColor">
+
+                              <EditText
+                                  android:id="@+id/edtTxtComment"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:hint="Comment"
+                                  android:textColor="@color/colorDarkGrey"
+                                  android:theme="@style/BorderColor" />
+                          </android.support.design.widget.TextInputLayout>
+                      </LinearLayout>
+
+              </LinearLayout>-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@color/colorPink"/>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnPagetwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="#FFFFFF"
+                android:background="@color/colorPink"
+                android:text="Repair Details – Page 2"
+                android:textAllCaps="false"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"/>
+            <LinearLayout
+                android:id="@+id/RepairDetailsPage2_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <!-- <LinearLayout
+                         android:id="@+id/spinnerIdleHoursLayout"
+                         android:layout_weight="1"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_margin="5dp"
+                         android:orientation="vertical">
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:text="Idle Hours"
+                             android:padding="5dp"/>
+                         <LinearLayout
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/spinner_border">
+                             <com.guna.libmultispinner.MultiSelectionSpinner
+                                 android:id="@+id/SpinnerIdleHours"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:layout_marginTop="4dp"
+                                 android:layout_marginBottom="4dp"
+                                 android:theme="@style/BorderColor"/>
+                         </LinearLayout>
+                     </LinearLayout>-->
+                    <LinearLayout
+                        android:id="@+id/spinnerIdleHoursLayout"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:theme="@style/BorderColor">
+
+                            <EditText
+                                android:id="@+id/edtTxtEJDocketNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="EJ Docket No"
+                                android:textColor="@color/colorDarkGrey"
+                                android:theme="@style/BorderColor"
+                                android:maxLength="20"/>
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/spinnerTransactionLayout"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Transaction Date/Time"
+                            android:padding="5dp"/>
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_border">
+                            <TextView
+                                android:id="@+id/tvTransactionDateTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                               
+                                android:padding="7dp"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:id="@+id/spinnerErrorCodeLayout"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Error Code"
+                            android:padding="5dp"/>
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_border">
+                            <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                                android:id="@+id/SpinnerErrorCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:theme="@style/BorderColor"
+                                app:hintText="--Select--"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/spinnerModuleAffectedLayout"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Module Affected"
+                            android:padding="5dp"/>
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_border">
+                            <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                                android:id="@+id/SpinnerModuleAffected"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:theme="@style/BorderColor"
+                                app:hintText="--Select--"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:id="@+id/Sub-ModuleAffectedLayout"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sub-Module Affected"
+                            android:padding="5dp"/>
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_border">
+                            <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                                android:id="@+id/SpinnerSubModuleAffected"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:theme="@style/BorderColor"
+                                app:hintText="--Select--"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/Sub-ModuleAffectedLayout1"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                      <!-- <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sub-Module Affected"
+                            android:padding="5dp"
+                           android:visibility="invisible"/>-->
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_border"
+                            android:layout_marginTop="20dp">
+                            <android.support.v7.widget.AppCompatButton
+                                android:id="@+id/btnIdealHours"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:layout_centerInParent="true"
+                                android:textColor="#FFFFFF"
+                                android:background="@color/colorPink"
+                                android:text="Idle Hours"
+                                android:textAllCaps="false"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@color/colorPink"/>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnPagethree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="#FFFFFF"
+                android:background="@color/colorPink"
+                android:text="Repair Details – Page 3"
+                android:textAllCaps="false"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <LinearLayout
+                android:id="@+id/RepairDetailsPage3_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:id="@+id/FCRNoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true">
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:theme="@style/BorderColor">
+
+                        <EditText
+                            android:id="@+id/edtTxtFCRNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="FCR No"
+                            android:textColor="@color/colorDarkGrey"
+                            android:theme="@style/BorderColor"
+                            android:maxLength="10"/>
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:id="@+id/FCRAttachmentLayout"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="FCR Attachment" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginRight="10dp">
+
+                            <ImageView
+                                android:id="@+id/FCRAttachmentimageView"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="fitXY"
+                                android:layout_centerInParent="true"
+                                android:layout_margin="2dip"
+                                android:layout_below="@+id/ticketLayout"
+                                android:src="@drawable/cms_logo"
+                                android:visibility="visible"
+                                />
+                            <android.support.v7.widget.AppCompatButton
+                                android:id="@+id/FCRAttachmentupload"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_centerInParent="true"
+                                android:padding="16dp"
+                                android:textColor="#FFFFFF"
+                                android:layout_below="@+id/imageView"
+                                android:background="@color/colorPink"
+                                android:layout_marginTop="16dp"
+                                android:text="Upload"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/InstallationCertificateLayout"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Installation Certificate" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginRight="10dp">
+
+                            <ImageView
+                                android:id="@+id/InstallationCertificateImageview"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="fitXY"
+                                android:layout_centerInParent="true"
+                                android:layout_margin="2dip"
+                                android:layout_below="@+id/ticketLayout"
+                                android:src="@drawable/cms_logo"
+                                android:visibility="visible"
+                                />
+                            <android.support.v7.widget.AppCompatButton
+                                android:id="@+id/InstallationCertificateupload"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_centerInParent="true"
+                                android:padding="16dp"
+                                android:textColor="#FFFFFF"
+                                android:layout_below="@+id/imageView"
+                                android:background="@color/colorPink"
+                                android:layout_marginTop="16dp"
+                                android:text="Upload"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ATMImagesLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ATM Images" />
+                    <LinearLayout
+                        android:id="@+id/ATMImagesLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+                        <android.support.v7.widget.AppCompatButton
+                            android:id="@+id/ATMImagesupload"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:layout_centerInParent="true"
+                            android:padding="16dp"
+                            android:textColor="#FFFFFF"
+                            android:layout_below="@+id/imageView"
+                            android:background="@color/colorPink"
+                            android:layout_marginTop="16dp"
+                            android:text="Upload"
+                            android:visibility="gone"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginRight="10dp">
+                                <ImageView
+                                    android:id="@+id/ATMImagesImageview1"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:scaleType="fitXY"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="2dip"
+                                    android:layout_below="@+id/ticketLayout"
+                                    android:src="@drawable/cms_logo"
+                                    android:visibility="visible"
+                                    />
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/ATMImagesupload1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_centerInParent="true"
+                                    android:padding="16dp"
+                                    android:textColor="#FFFFFF"
+                                    android:layout_below="@+id/imageView"
+                                    android:background="@color/colorPink"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Upload"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:id="@+id/ATMImagesImageview2"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:scaleType="fitXY"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="2dip"
+                                    android:layout_below="@+id/ticketLayout"
+                                    android:src="@drawable/cms_logo"
+                                    android:visibility="visible"
+
+                                    />
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/ATMImagesupload2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_centerInParent="true"
+                                    android:padding="16dp"
+                                    android:textColor="#FFFFFF"
+                                    android:layout_below="@+id/imageView"
+                                    android:background="@color/colorPink"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Upload"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/TransactionImageLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Transaction Image" />
+                    <LinearLayout
+                        android:id="@+id/TransactionImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+                        <android.support.v7.widget.AppCompatButton
+                            android:id="@+id/TransactionImageupload"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:layout_centerInParent="true"
+                            android:padding="16dp"
+                            android:textColor="#FFFFFF"
+                            android:layout_below="@+id/imageView"
+                            android:background="@color/colorPink"
+                            android:layout_marginTop="16dp"
+                            android:text="Upload"
+                            android:visibility="gone"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginRight="10dp">
+                                <ImageView
+                                    android:id="@+id/TransactionImageImageview1"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:scaleType="fitXY"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="2dip"
+                                    android:layout_below="@+id/ticketLayout"
+                                    android:src="@drawable/cms_logo"
+                                    android:visibility="visible"
+                                    />
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/TransactionImageupload1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_centerInParent="true"
+                                    android:padding="16dp"
+                                    android:textColor="#FFFFFF"
+                                    android:layout_below="@+id/imageView"
+                                    android:background="@color/colorPink"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Upload"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:id="@+id/TransactionImageImageview2"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:scaleType="fitXY"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="2dip"
+                                    android:layout_below="@+id/ticketLayout"
+                                    android:src="@drawable/cms_logo"
+                                    android:visibility="visible"
+
+                                    />
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/TransactionImageupload2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_centerInParent="true"
+                                    android:padding="16dp"
+                                    android:textColor="#FFFFFF"
+                                    android:layout_below="@+id/imageView"
+                                    android:background="@color/colorPink"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Upload"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ErrorHistoryLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Error History" />
+                    <LinearLayout
+                        android:id="@+id/ErrorHistoryImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+                        <android.support.v7.widget.AppCompatButton
+                            android:id="@+id/ErrorHistoryupload"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:layout_centerInParent="true"
+                            android:padding="16dp"
+                            android:textColor="#FFFFFF"
+                            android:layout_below="@+id/imageView"
+                            android:background="@color/colorPink"
+                            android:layout_marginTop="16dp"
+                            android:text="Upload"
+                            android:visibility="gone"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginRight="10dp">
+                                <ImageView
+                                    android:id="@+id/ErrorHistoryImageview1"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:scaleType="fitXY"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="2dip"
+                                    android:layout_below="@+id/ticketLayout"
+                                    android:src="@drawable/cms_logo"
+                                    android:visibility="visible"
+                                    />
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/ErrorHistoryimgupload1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_centerInParent="true"
+                                    android:padding="16dp"
+                                    android:textColor="#FFFFFF"
+                                    android:layout_below="@+id/imageView"
+                                    android:background="@color/colorPink"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Upload"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--  <LinearLayout
+                      android:id="@+id/TransactionImageLayout"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="5dp"
+                      android:orientation="vertical">
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="Transaction Image" />
+                      <LinearLayout
+                          android:id="@+id/TransactionImageLayout1"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                          <android.support.v7.widget.AppCompatButton
+                              android:id="@+id/TransactionImageupload"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textSize="12dp"
+                              android:layout_centerInParent="true"
+                              android:padding="16dp"
+                              android:textColor="#FFFFFF"
+                              android:layout_below="@+id/imageView"
+                              android:background="@color/colorPink"
+                              android:layout_marginTop="16dp"
+                              android:text="Select Image"/>
+                          <ImageView
+                              android:id="@+id/TransactionImageImageview"
+                              android:layout_width="100dp"
+                              android:layout_height="100dp"
+                              android:scaleType="fitXY"
+                              android:layout_centerInParent="true"
+                              android:layout_margin="2dip"
+                              android:layout_below="@+id/ticketLayout"
+                              android:src="@drawable/cms_logo"
+                              android:visibility="visible"
+                              />
+
+                      </LinearLayout>
+
+                  </LinearLayout>-->
+
+                <!--   <LinearLayout
+                       android:id="@+id/InstallationCertificateLayout"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="5dp"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="Installation Certificate" />
+                       <LinearLayout
+                           android:id="@+id/InstallationCertificateLayout1"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal">
+                           <android.support.v7.widget.AppCompatButton
+                               android:id="@+id/InstallationCertificateupload"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:textSize="12dp"
+                               android:layout_centerInParent="true"
+                               android:padding="16dp"
+                               android:textColor="#FFFFFF"
+                               android:layout_below="@+id/imageView"
+                               android:background="@color/colorPink"
+                               android:layout_marginTop="16dp"
+                               android:text="Select Image"/>
+                           <ImageView
+                               android:id="@+id/InstallationCertificateImageview"
+                               android:layout_width="100dp"
+                               android:layout_height="100dp"
+                               android:scaleType="fitXY"
+                               android:layout_centerInParent="true"
+                               android:layout_margin="2dip"
+                               android:layout_below="@+id/ticketLayout"
+                               android:src="@drawable/cms_logo"
+                               android:visibility="visible"
+                               />
+
+                       </LinearLayout>
+
+                   </LinearLayout>-->
+
+                <!-- <LinearLayout
+                     android:id="@+id/ErrorHistoryLayout"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="5dp"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="Installation Certificate" />
+                     <LinearLayout
+                         android:id="@+id/ErrorHistoryLayout1"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal">
+                         <android.support.v7.widget.AppCompatButton
+                             android:id="@+id/ErrorHistoryupload"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:textSize="12dp"
+                             android:layout_centerInParent="true"
+                             android:padding="16dp"
+                             android:textColor="#FFFFFF"
+                             android:layout_below="@+id/imageView"
+                             android:background="@color/colorPink"
+                             android:layout_marginTop="16dp"
+                             android:text="Select Image"/>
+                         <ImageView
+                             android:id="@+id/ErrorHistoryImageview"
+                             android:layout_width="100dp"
+                             android:layout_height="100dp"
+                             android:scaleType="fitXY"
+                             android:layout_centerInParent="true"
+                             android:layout_margin="2dip"
+                             android:layout_below="@+id/ticketLayout"
+                             android:src="@drawable/cms_logo"
+                             android:visibility="visible"
+                             />
+
+                     </LinearLayout>
+
+                 </LinearLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/FuturePartLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Future Part"
+                        android:padding="5dp"/>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_border">
+                        <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                            android:id="@+id/SpinnerFuturePart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:theme="@style/BorderColor"
+                            app:hintText="--Select--"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/save_repair_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/colorPink"
+                android:text="Save"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

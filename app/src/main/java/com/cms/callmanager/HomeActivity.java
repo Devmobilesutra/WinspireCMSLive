@@ -308,15 +308,16 @@ public class HomeActivity extends AppCompatActivity
                 break;
             case R.id.logout:
 
-                preferences = getSharedPreferences("CMS", Context.MODE_PRIVATE);
+
+                SharedPreferences preferences =getSharedPreferences("mypref",Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
-                editor.remove("userId");
-                editor.remove("UserName");
+                editor.clear();
                 editor.commit();
                 finish();
 
-             //   userId = preferences.getString("userId", null);
-             //   name = preferences.getString("UserName", null);
+
+
+
 
                 Intent logoutIntent = new Intent(HomeActivity.this, LoginActivity.class);
                 logoutIntent.putExtra("finish", true);

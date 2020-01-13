@@ -11,7 +11,17 @@ public interface Constant  {
      String LONGI = "LONGI";
      String LATI = "LATI";
      String UserId= "UserId";
-    String Pass= "UserId";
+     String Pass= "Password";
+
+     //*******images key
+    String FCRAttachment ="FCRAttachment";
+    String InstallationCertificate ="InstallationCertificate";
+    String ATMImages1 ="ATMImages1";
+    String ATMImages2 ="ATMImages2";
+    String TransactionImage1 ="TransactionImage1";
+    String TransactionImage2 ="TransactionImage2";
+    String ErrorHistory ="ErrorHistory";
+
 
 
     /* String LONGI = call.getLongitude();

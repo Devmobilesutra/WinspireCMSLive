@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -65,6 +66,7 @@ public class CreateReplacementActivity extends AppCompatActivity {
     String UpdateFlag = "";
     String codeField;
     String userId;
+    Button btnSave;
     boolean docketSelection = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +82,7 @@ public class CreateReplacementActivity extends AppCompatActivity {
         tvPocketDate = (TextView)findViewById(R.id.tvPocketDate);
         tvResource = (TextView)findViewById(R.id.tvResource);
         tvBankDocket = (TextView)findViewById(R.id.tvBankDocket);
+        btnSave =(Button)findViewById(R.id.btnSave);
 
 
 
@@ -1013,6 +1016,8 @@ public class CreateReplacementActivity extends AppCompatActivity {
                     replacementLineAdapter = new ReplacementLineAdapter(replacementLines, getApplicationContext());
                     rv_line.setAdapter(replacementLineAdapter);
 
+                    btnSave.setEnabled(true);
+                    btnSave.setBackgroundColor(getResources().getColor(R.color.colorPink));
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -1021,8 +1026,11 @@ public class CreateReplacementActivity extends AppCompatActivity {
 
                 }
             } else {
-                Utils.showAlertBox("Inv. Replacement Jnl Already created for this docket no.", CreateReplacementActivity.this);
-              //  replacementLines.clear();
+             //   Utils.showAlertBox("There is no record for consumption, PART recieved remaining for some of line items.", CreateReplacementActivity.this);
+                Utils.showAlertBox("Part Consumption not allowed, since some of lines in billiable line is not fully processed", CreateReplacementActivity.this);
+                //  replacementLines.clear();
+                btnSave.setEnabled(false);
+                btnSave.setBackgroundColor(getResources().getColor(R.color.red_light));
             }
         }
     }

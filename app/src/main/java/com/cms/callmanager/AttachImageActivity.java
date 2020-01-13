@@ -133,6 +133,11 @@ public class AttachImageActivity extends AppCompatActivity {
                     bm.compress(Bitmap.CompressFormat.JPEG, 50, bOut);
                     uploadedFile = Base64.encodeToString(bOut.toByteArray(), Base64.DEFAULT);
 
+
+                    Log.d("", "onClick_uploadedFile: "+uploadedFile);
+
+
+
                     if (Utils.isInternetOn(AttachImageActivity.this)) {
                         UploadFileAsyncTask uploadFileAsyncTask = new UploadFileAsyncTask(Constants.FILE_ATTACHMENT + "?userId=" + userId, "POST", comment, uploadedFile, AttachImageActivity.this);
                         uploadFileAsyncTask.execute();

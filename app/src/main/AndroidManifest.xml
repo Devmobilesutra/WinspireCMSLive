@@ -12,13 +12,13 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:name=".MyApplication"
-        android:theme="@style/AppTheme">
-
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network_security_config">
 
         <uses-library
             android:name="org.apache.http.legacy"
@@ -36,6 +36,15 @@
         <activity
             android:name=".RepairDetailsActivity"
             android:label="Repair Details" />
+        <activity
+            android:name="com.cms.callmanager.multispinner.CallClloserActivity"
+            android:label="Call Closure" />
+
+        <activity android:name="com.cms.callmanager.multispinner.QuestionairActivity"
+            android:theme="@style/AppDialogTheme"
+
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+
         <activity
             android:name=".AttachImageActivity"
             android:label="Attach Image" />
@@ -58,11 +67,15 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
+
+        <activity android:name=".Foc_Chargeble.ListActivity"
+            android:theme="@style/AppDialogTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize"/>
+
         <!--
         <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
         android:theme="@style/Base.Theme.AppCompat" />
         -->
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -106,8 +119,9 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".activities.CreateTransferOrderActivity"
-            android:label="@string/title_activity_replacement_item"/>
+        <activity
+            android:name=".activities.CreateTransferOrderActivity"
+            android:label="@string/title_activity_replacement_item" />
         <activity
             android:name=".activities.GoodHubActivity"
             android:label="@string/title_activity_good_hub"
@@ -116,9 +130,9 @@
             android:name=".activities.DefectiveHubActivity"
             android:label="@string/title_activity_defective_hub"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.ReplacementDetailsActivity"
-            android:label="@string/consumption_for_replacement_items"
-            />
+        <activity
+            android:name=".activities.ReplacementDetailsActivity"
+            android:label="@string/consumption_for_replacement_items" />
         <activity
             android:name=".activities.ReplacementItemActivity"
             android:label="@string/title_activity_replacement_item"
@@ -127,16 +141,14 @@
             android:name=".activities.StockTransferDetailActivity"
             android:label="@string/inventory_to_be_received_stock_transfer"
             android:windowSoftInputMode="stateAlwaysHidden" />
-
-
         <activity android:name=".activities.CreateReplacementActivity" />
-
-        <activity android:name=".activities.DemoActivity"
-         />
-        <activity android:name=".activities.GoodDetailsActivity"
-            android:label="@string/title_activity_good_hub"/>
-        <activity android:name=".activities.DefectiveDetailsActivity"
-            android:label="@string/title_activity_defective_hub"/>
+        <activity android:name=".activities.DemoActivity" />
+        <activity
+            android:name=".activities.GoodDetailsActivity"
+            android:label="@string/title_activity_good_hub" />
+        <activity
+            android:name=".activities.DefectiveDetailsActivity"
+            android:label="@string/title_activity_defective_hub" />
     </application>
 
 </manifest>

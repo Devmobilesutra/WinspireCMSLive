@@ -39,6 +39,8 @@ import com.cms.callmanager.RepairDetailsActivity;
 import com.cms.callmanager.constants.Constant;
 import com.cms.callmanager.constants.Constants;
 import com.cms.callmanager.dto.CallDTO;
+import com.cms.callmanager.multispinner.CallClloserActivity;
+import com.cms.callmanager.multispinner.QuestionairActivity;
 import com.cms.callmanager.services.CallManagerAsyncTask;
 import com.cms.callmanager.utils.Utils;
 import com.cms.callmanager.utils.Validation;
@@ -276,6 +278,35 @@ public class CallListAdapter extends RecyclerView.Adapter<CallListAdapter.ViewHo
 
             @Override
             public void onClickItem(int pos) {
+
+                QuestionairActivity.QuestionJsonArray = null;
+                QuestionairActivity.data = null;
+                CallClloserActivity.data_ideal = null;
+                CallClloserActivity.IdleHoursjson = null;
+                CallClloserActivity.CallClosurejson = null;
+               CallClloserActivity.ImagesJsonArray = null;
+               CallClloserActivity.ActivityTypestr = null;
+               CallClloserActivity.TATMissReasonstr = null;
+               CallClloserActivity.EJDocketNo = null;
+               CallClloserActivity.TransactioDateTime = null;
+               CallClloserActivity.FcrNo = null;
+                CallClloserActivity.problemFixstr = null;
+                CallClloserActivity.solutionstr = null;
+                CallClloserActivity.RespCategorystr = null;
+                CallClloserActivity.ErrorCodestr = null;
+                CallClloserActivity.ModuleAffectedstr = null;
+                CallClloserActivity.SubModuleAffectedstr = null;
+                CallClloserActivity.FuturePartstr = null;
+                Prefs.remove(Constant.FCRAttachment);
+                Prefs.remove(Constant.InstallationCertificate);
+                Prefs.remove(Constant.ATMImages1);
+                Prefs.remove(Constant.ATMImages2);
+                Prefs.remove(Constant.TransactionImage1);
+                Prefs.remove(Constant.TransactionImage2);
+                Prefs.remove(Constant.ErrorHistory);
+
+//CallClloserActivity.spinnerSolutionArray = null;
+//CallClloserActivity.spinnerProblemFixArray =  null;
                 preferences = (context).getSharedPreferences("CMS", Context.MODE_PRIVATE);
                 int isTLFlag = preferences.getInt("IsTLFlag", 0);
                 Log.d("", "onClickItemisTLFlag: " + isTLFlag);
@@ -316,45 +347,45 @@ public class CallListAdapter extends RecyclerView.Adapter<CallListAdapter.ViewHo
     private void showStatusAlertDialog(final int pos) {
         Utils.Log("showStatusAlertDialog===");
         CharSequence[] alertBoxOptions = null;
-        String holdCallStatus = "Hold";
+        //String holdCallStatus = "Hold";
         if (callList.get(pos).getMainStatus().trim().equalsIgnoreCase("Hold")) {
-            holdCallStatus = "Unhold";
+            //holdCallStatus = "Unhold";
         }
 
         if (callList.get(pos).getMainStatus().trim().equalsIgnoreCase("Hold")) {
 
             Utils.Log("showStatusAlertDialog===2");
-            alertBoxOptions = new CharSequence[]{holdCallStatus, "Call Details"};
+            alertBoxOptions = new CharSequence[]{/*holdCallStatus,*/ "Call Details"};
 
         } else if (callList.get(pos).getMainStatus().trim().equalsIgnoreCase("Open")) {
 
             if (callList.get(pos).getActive() && callList.get(pos).getMobileActivity().trim().equalsIgnoreCase("DISPATCHED ENGINEER")) {
-                alertBoxOptions = new CharSequence[]{"Accept", "Reject"};
+                alertBoxOptions = new CharSequence[]{"Accept", "Reject",/*holdCallStatus,*/ "Call Details"};
             } else if (callList.get(pos).getActive() && callList.get(pos).getMobileActivity().trim().equalsIgnoreCase("Call Accepted")) {
                 Utils.Log("showStatusAlertDialog===1");
                 //alertBoxOptions.clone();
 
-                alertBoxOptions = new CharSequence[]{"Engineer Started", holdCallStatus, "Call Details"};
+                alertBoxOptions = new CharSequence[]{"Engineer Started", /*holdCallStatus,*/ "Call Details"};
             } else if (callList.get(pos).getActive() && callList.get(pos).getMobileActivity().trim().equalsIgnoreCase("Engineer Reached")
             ) {
                 Utils.Log("showStatusAlertDialog===2");
-                alertBoxOptions = new CharSequence[]{"Repair Started", holdCallStatus, "Call Details"};
+                alertBoxOptions = new CharSequence[]{"Repair Started", /*holdCallStatus,*/ "Call Details"};
             } else if (callList.get(pos).getActive() && callList.get(pos).getMobileActivity().trim().equalsIgnoreCase("Engineer Started")) {
                 Utils.Log("showStatusAlertDialog===3");
-                alertBoxOptions = new CharSequence[]{"Engineer Reached", holdCallStatus, "Attach File", "Call Details"};
+                alertBoxOptions = new CharSequence[]{"Engineer Reached", /*holdCallStatus,*/ "Attach File", "Call Details"};
             } else if (callList.get(pos).getActive() && callList.get(pos).getMobileActivity().trim().equalsIgnoreCase("Repair Started")
             ) {
                 Utils.Log("showStatusAlertDialog===4");
-                alertBoxOptions = new CharSequence[]{"Repair Completed", holdCallStatus, "Attach File", "Call Details"};
+                alertBoxOptions = new CharSequence[]{"Repair Completed", /*holdCallStatus,*/ "Attach File", "Call Details"};
             } else if (callList.get(pos).getActive() && callList.get(pos).getMobileActivity().equalsIgnoreCase("Repair Completed")) {
                 Utils.Log("showStatusAlertDialog===5");
                 alertBoxOptions = new CharSequence[]{"Attach File", "Acknowledge", "Call Details"};
             } else if (callList.get(pos).getActive() && callList.get(pos).getMobileActivity().equalsIgnoreCase("Hold")) {
                 Utils.Log("showStatusAlertDialog===6");
-                alertBoxOptions = new CharSequence[]{holdCallStatus, "Attach File", "Call Details"};
+                alertBoxOptions = new CharSequence[]{/*holdCallStatus,*/ "Attach File", "Call Details"};
             } else if (callList.get(pos).getActive() && callList.get(pos).getMobileActivity().equalsIgnoreCase("Unhold")) {
                 Utils.Log("showStatusAlertDialog===7");
-                alertBoxOptions = new CharSequence[]{holdCallStatus, "Attach File", "Call Details"};
+                alertBoxOptions = new CharSequence[]{/*holdCallStatus,*/ "Attach File", "Call Details"};
             } else if (callList.get(pos).getActive() && callList.get(pos).getMobileActivity().equalsIgnoreCase("Close")) {
                 Utils.Log("showStatusAlertDialog===7");
                 alertBoxOptions = new CharSequence[]{"Call Details"};
@@ -424,6 +455,7 @@ public class CallListAdapter extends RecyclerView.Adapter<CallListAdapter.ViewHo
                 } else if (finalAlertBoxOptions[item].equals("Repair Completed") || finalAlertBoxOptions[item].equals("Repair Details")) {
                     Intent i = new Intent(context, RepairDetailsActivity.class);
                     i.putExtra("docketNo", callList.get(pos).getDocketNo().toString());
+                    i.putExtra("ATM_id", callList.get(pos).getAtmID().toString());
                     context.startActivity(i);
                 } else if (finalAlertBoxOptions[item].equals("Call Details")) {
                     Intent i = new Intent(context, CallDetailsActivity.class);
@@ -510,10 +542,10 @@ public class CallListAdapter extends RecyclerView.Adapter<CallListAdapter.ViewHo
                                                           String my = "";
                                                           String dm = "";
 
-                                                          if (monthOfYear >= 0 && monthOfYear <= 9) {
+                                                          if (monthOfYear >= 0 && monthOfYear <  9) {
                                                               my = "0" + (monthOfYear + 1);
                                                           } else {
-                                                              my = String.valueOf(monthOfYear);
+                                                              my = String.valueOf(monthOfYear + 1);
                                                           }
                                                           if (dayOfMonth >= 0 && dayOfMonth <= 9) {
                                                               dm = "0" + dayOfMonth;

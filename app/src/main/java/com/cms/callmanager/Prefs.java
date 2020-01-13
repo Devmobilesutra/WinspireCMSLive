@@ -2,6 +2,7 @@ package com.cms.callmanager;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 
 import com.cms.callmanager.constants.Constant;
 import com.cms.callmanager.constants.Constants;
@@ -38,6 +39,10 @@ public class Prefs implements Constant {
     public void save(String key, boolean value) {
         editor.putBoolean(key, value).apply();
     }
+
+   /* public void save(String key, Bitmap value) {
+        editor.put(key, value).apply();
+    }*/
 
     public void save(String key, String value) {
         editor.putString(key, value).apply();
@@ -118,7 +123,7 @@ public class Prefs implements Constant {
         return preferences.getAll();
     }
 
-    public void remove(String key) {
+    public static void remove(String key) {
         editor.remove(key).apply();
     }
 

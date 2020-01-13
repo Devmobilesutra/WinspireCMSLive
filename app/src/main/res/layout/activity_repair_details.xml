@@ -172,6 +172,10 @@
                 android:checked="false"
                 android:text="Spares Used"
                 android:theme="@style/MyCheckBox" />
+
+
+
+
             <!--   <LinearLayout
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
@@ -203,6 +207,35 @@
                 android:checked="false"
                 android:text="Unproductive Visit"
                 android:theme="@style/MyCheckBox" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="right">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_gravity="right"
+        android:text="View"
+        android:id="@+id/view"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:background="@color/colorAccent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:textAllCaps="false"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_gravity="right"
+        android:text="View Call Closure"
+        android:id="@+id/view_Closour"
+        android:visibility="visible"
+        android:textColor="@color/white"
+        android:background="@color/colorAccent"
+        android:layout_height="40dp"
+        android:textAllCaps="false"
+        android:layout_margin="5dp"/>
+</LinearLayout>
+
             <!--      <android.support.design.widget.TextInputLayout
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"

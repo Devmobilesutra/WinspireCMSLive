@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -53,10 +54,16 @@ public class LoginActivity extends AppCompatActivity {
     int permsRequestCode = 200;
     private static final int PERMISSION_REQUEST_CODE = 200;
 
+    SharedPreferences sharedPreferences;
+    public static final String mypreference = "mypref";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        sharedPreferences = getSharedPreferences(mypreference,
+                Context.MODE_PRIVATE);
 
         ActionBar actionBar = getSupportActionBar();
         if(!checkPermission())
@@ -163,9 +170,12 @@ public class LoginActivity extends AppCompatActivity {
         name        = (EditText) findViewById(R.id.edtTxtUserName);
         passwordTxt = (EditText) findViewById(R.id.edTxtPassword);
 
-        /*name.setText(Prefs.with(this).getString(UserId, ""));
-        passwordTxt.setText(Prefs.with(this).getString(Pass, ""));*/
 
+       String UserName = sharedPreferences.getString("username", "");
+       String  Password = sharedPreferences.getString("password", "");
+
+        name.setText(UserName);
+        passwordTxt.setText(Password);
 
         preferences = getSharedPreferences("CMS", Context.MODE_PRIVATE);
 
@@ -182,8 +192,13 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void login(){
+
+
+
         String userName = name.getText().toString();
         String password = passwordTxt.getText().toString();
+
+        Prefs.with(this).getString(UserId, "");
 
         UserAsyncTask userAsyncTask = null;
         userAsyncTask = new UserAsyncTask(Constants.LOGIN, "POST", userName, password, LoginActivity.this );
@@ -251,12 +266,20 @@ public class LoginActivity extends AppCompatActivity {
                         }
                         preferences.edit().putInt("IsTLFlag", Integer.parseInt(user.getString("IsTl"))).commit();
                         preferences.edit().putString("UserName", user.getString("FullName").toString()).commit();
-
                         preferences.edit().putString("userId" , user.getString("UserId").toString()).commit();
 
 
-                        Prefs.with(LoginActivity.this).save(UserId, userName.toString());
-                        Prefs.with(LoginActivity.this).save(Pass, password.toString());
+                        Prefs.with(LoginActivity.this).save(UserId, userName);
+                        Prefs.with(LoginActivity.this).save(Pass, password);
+
+
+                        // store shared preference
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("username", userName);
+                        editor.putString("password", password);
+                        editor.commit();
+
+
 
 
                         Intent intent = new Intent(LoginActivity.this,HomeActivity.class);

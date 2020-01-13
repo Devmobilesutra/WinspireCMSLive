@@ -205,7 +205,10 @@ public abstract class CallManagerAsyncTask extends AsyncTask<Object, String, JSO
                 read = br.readLine();
             }
 
+            Log.d("", "convertResponseToJSONqqqqqqqq: "+sb.toString());
+
             responseObject = new JSONObject(sb.toString());
+
 
         } catch (EOFException ee){
             ee.printStackTrace();
@@ -221,9 +224,9 @@ public abstract class CallManagerAsyncTask extends AsyncTask<Object, String, JSO
 
 
 
-    protected JSONArray doWorkJSONArray(JSONArray inputJSONDATA) throws ConnectException, EOFException, SocketTimeoutException {
+    protected JSONObject doWorkJSONArray(JSONArray inputJSONDATA) throws ConnectException, EOFException, SocketTimeoutException {
 
-        JSONArray responseArray = null;
+        JSONObject responseArray = null;
         try {
 
             urlConnection.connect();
@@ -238,7 +241,7 @@ public abstract class CallManagerAsyncTask extends AsyncTask<Object, String, JSO
             int responseCode = urlConnection.getResponseCode();
             Utils.Log("before response === " + urlConnection.getResponseMessage().toString());
 
-            responseArray = convertResponseToJSONArray(urlConnection.getInputStream());
+            responseArray = convertResponseToJSON(urlConnection.getInputStream());
           /*  if(responseCode == 200 ){
 
             }else {

@@ -11,9 +11,9 @@ public class Constants {
 
 
    // public static String Base_url= "http://115.248.31.151:90/cms/";
-  //  public static String Base_url= "http://52.172.203.199/webapi/";  //old
+     public static String Base_url= "http://52.172.203.199/webapi/";  //old
 
-    public static String Base_url= "https://naverp.cms.com:8085/webapi/";  //new
+   // public static String Base_url= "https://naverp.cms.com:8085/webapi/";  //new
     public static boolean LOG_DEBUG = true;
 
     public static String key = "OiB2LU+KWGnkI1j5nlkkcA==";
@@ -106,5 +106,36 @@ public class Constants {
     public static String ResponseCategory = "cms/ticketing/responsecategory";
     public static String ProblemFix = "cms/ticketing/problemfix";
     public static String Solution = "cms/ticketing/solution";
+
+
+
+    // FOC CHARGE
+
+   // Testing API
+ /*   public static String FOC_LIST_URL1 = "bins/1a3v1s";
+    public static String CHARGE_LIST_URL1 = "bins/107fc4";
+    public static String SAVE_FOC_URL = "bins/107fc4";
+
+    public static String Base_url1 ="https://api.myjson.com/";*/
+
+
+    // ===  UAT API ========
+
+     public static String Base_url1= "http://52.172.203.199/webapi/";  //old
+     public static String FOC_LIST_URL1 = "cms/MovePartRequest/GrtDropDataForFOC";
+     public static String CHARGE_LIST_URL1 = "cms/MovePartRequest/GetCHGCItemForPartRequest";
+     public static String SAVE_FOC_URL = "/cms/MovePartRequest/FocPartSave";
+
+    public static String SAVE_CHARGE_URL = "/cms/PartRequest/SaveCHGCPartRequest";
+
+    public static String SAVE_CHARGE_IMAGES_URL ="/cms/MovePartRequest/AddFiles";
+
+
+    // API for call closour***********
+
+    public static String SAVE_CALL_CLOSOUR ="/cms/MovePartRequest/SaveAllCallClosure";
+    public static String SAVE_CALL_CLOSOUR_IMAGES ="/cms/MovePartRequest/AddTicketAttachmentFiles";
+    public static String SAVE_CALL_CLOSOUR_QUESTION ="/cms/MovePartRequest/InsertQuestionnaire";
+    public static String SAVE_CALL_CLOSOUR_IdealHours ="/cms/MovePartRequest/InsertIdleHours";
 
 }
